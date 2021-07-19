@@ -1,128 +1,157 @@
-.footer__main{
-    height: 372px;
-    background: #f3ab3e;
+.footer{
     display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-}
-
-.footer__logo {
-    margin-top: 135px;
-    /* margin-left: 90px; */
-}
-
-.footer__info {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    &__main{
+        height: 372px;
+        width: 100%;
+        background: #f3ab3e;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    &__logo {
+        margin-top: 135px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+    &__heading {
+        font-family: "Mulish-ExtraBold";
+        color: white;
+        padding-bottom: 18px;
+        font-size: 26px;
+        line-height: 37px;
+    }
+    &__payment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__contacts{
+        width: 28%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__form{
+        width: 495px;
+        display: flex;
+        align-items: center;
+    }
+    &__bottom {
+        height: 61px;
+        background: #6d2b1f;
+        width:100%;
+    }
 }
 
 .info__list {
     padding: 0;
+    &-item {
+        font-size: 18px;
+        color: #6d450c;
+        font-family: "Mulish-Bold";
+        margin-bottom: 15px;
+    }
 }
 
-.info__list-item {
-    font-size: 18px;
-    color: #6d450c;
-    font-family: "Mulish-Bold";
-    margin-bottom: 15px;
+.payment{
+    &__box {
+        width: 260px;
+    }
+    &__img {
+        margin-right: 15px;
+        margin-bottom: 25px;
+    }
 }
 
-.footer__heading {
-    font-size: 26px;
-    font-family: "Mulish-ExtraBold";
-    color: white;
-    margin-top: 76px;
-    margin-bottom: 40px;
-    padding: 0;
+.contacts{
+    &__field{
+        background:url(./../images/subscribe_Icon.png) no-repeat;
+        background-position:20px;
+        border-radius: 35px;
+        height: 60px;
+        width: 495px;
+        color:#6d450c;
+        font-family: Mulish-Bold;
+        font-size: 17px;
+        outline: none;
+        padding-left: 65px;
+        background-color: white;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        -ms-border-radius: 35px;
+        -o-border-radius: 35px;
+}
+    &__btn{
+        border:none;
+        outline:none;
+        background:transparent;
+        color:#6d450c;
+        font-family: Mulish-ExtraBold;
+        font-size: 18px;
+        margin-left: 185px;
+        margin-top: 35px;
+        position: relative;
+        &::before {
+            content: url(./../images/Arrow_follow.png);
+            position: absolute;
+            width: 48px;
+            height: 43px;
+            background-position: center;
+            top: 25%;
+            left: 5%;
+        }
+    }
+    &__list{
+        display: flex;
+        width: 115px;
+        justify-content: space-between;
+        &-item{
+            margin: 0;
+        }
+    }
 }
 
-.footer__payment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.payment__box {
-    width: 260px;
-}
 
-.payment__img {
-    margin-right: 15px;
-    margin-bottom: 25px;
-}
-.footer__contacts{
-    display: flex;
-    flex-direction: column;
-    
-}
-.footer__form{
-    width: 495px;
-}
-.contacts__field{
-    background:url(./../images/subscribe_Icon.png) no-repeat;
-    background-position:20px;
-    border-radius: 35px;
-    height: 60px;
-    width: 495px;
-    color:#6d450c;
-    font-family: Mulish-Bold;
-    font-size: 17px;
-    outline: none;
-    padding-left: 65px;
-    background-color: white;
-}
 
-.contacts__btn{
-    border:none;
-    outline:none;
-    background:transparent;
-    color:#6d450c;
-    font-family: Mulish-ExtraBold;
-    font-size: 18px;
-    margin-left: 185px;
-    margin-top: 35px;
-}
 
-.contacts__list{
-    display: flex;
-    width: 115px;
-    justify-content: space-between;
-    position: absolute;
-}
-.contacts__list-item{
-    margin: 0;
-}
-.footer__bottom {
-    height: 61px;
-    background: #6d2b1f;
-    display: flex;
-}
-.bottom__text{
-    margin-top: 25px;
-    position: absolute;
-    left: 50%;
-    /*position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    font-size: 13px;
-    color:#af8a82;
-    /* -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%); */
-}
-.bottom__btn{
-    height: 50px;
-    width: 50px;
-    background:url(./../images/gotop_Icon.png) no-repeat;
-    background-position:center;
-    background-color:#f2662f;
-    border-radius:5px;
-    position: absolute;
-    left:1780px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -ms-border-radius:5px;
-    -o-border-radius:5px;
+.bottom{
+    &__text{
+        font-size: 13px;
+        line-height: 35px;
+        color: #af8a82;
+        display: block;
+        text-align: center;
+    }
+    &__btn{
+        height: 50px;
+        width: 50px;
+        border-radius:5px;
+        background:url(./../images/gotop_Icon.png) no-repeat;
+        background-position:center;
+        background-color:#f2662f;
+        border-radius:5px;
+        position: fixed;
+        right: 82px;
+        bottom: 38px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        -ms-border-radius:5px;
+        -o-border-radius:5px;
+        &::after {
+            content: "Go top";
+            color: white;
+            font-family: "Muli-Bold", sans-serif;
+            font-size: 16px;
+            line-height: 40px;
+            position: absolute;
+            right: 54px;
+            top: 38px;
+            display: block;
+            width: 55px
+        }
+    }
 }

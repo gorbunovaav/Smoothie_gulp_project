@@ -208,31 +208,46 @@ body {
 .icons__list {
     display: -ms-flexbox;
     display: flex;
-    width: 1000px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 980px;
+    height: 390px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-line-pack: justify;
-    align-content: space-between;
+    margin: 0 auto;
+    -ms-flex: 1 0 25%;
+    flex: 1 0 25%;
+    padding: 0;
 }
 
 .icons__list-item {
     display: -ms-flexbox;
     display: flex;
-    margin-right: 45px;
-    margin-left: 45px;
-    width: 25%;
-    -ms-flex-item-align: center;
-    align-self: center;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -ms-flex: 1;
-    flex: 1;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 25%;
+    height: 180px;
+    padding: 0 0 27px 0;
+    border-left: 2px solid #f6edde;
+    border-top: 2px solid #f6edde;
+}
+
+.icons__list:nth-child(5) {
+    border-left: none;
+}
+
+.icons__list:first-child {
+    border-left: none;
+}
+
+.icons__list:nth-child(-n+4) {
+    border-top: none;
 }
 
 .icons__heading {
@@ -335,9 +350,25 @@ body {
     z-index: 1;
 }
 
-.about__reasons {
+.reasons {
     margin-left: 240px;
     margin-top: 90px;
+}
+
+.reasons__list {
+    list-style-image: url(./../images/smoothie_list.png);
+    font-size: 21px;
+    margin-bottom: 50px;
+    margin-left: 32px;
+    margin-top: 4px;
+}
+
+.reasons__list-item {
+    margin-bottom: 20px;
+}
+
+.reasons__list-item-text--bold {
+    font-weight: bold;
 }
 
 .reasons__heading {
@@ -366,26 +397,56 @@ body {
     margin-top: 0;
 }
 
-.reasons__list {
-    list-style-image: url(./../images/smoothie_list.png);
-    font-size: 21px;
-    margin-bottom: 50px;
-    margin-left: 32px;
-    margin-top: 4px;
-}
-
-.reasons__list-item {
-    margin-bottom: 20px;
-}
-
-.text--bold {
-    font-weight: bold;
-}
-
-.products {
+.product {
     height: 720px;
     margin: 0;
     padding: 0;
+}
+
+.product__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.product__list-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 120px;
+    width: 475px;
+    height: 600px;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.product__heading {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    font-family: Mulish-Regular;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.product__text {
+    font-size: 21px;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 62px;
+    font-style: italic;
+}
+
+.product__img {
+    -ms-flex-item-align: center;
+    align-self: center;
 }
 
 .products__list {
@@ -413,41 +474,6 @@ body {
 
 #Turmeric_Garlic {
     background-color: #c5461c;
-}
-
-.product__heading {
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    font-family: Mulish-Regular;
-    margin-top: 35px;
-    margin-bottom: 15px;
-}
-
-.product__text {
-    font-size: 21px;
-    text-align: center;
-    color: white;
-    margin-top: 0;
-    margin-bottom: 62px;
-    font-style: italic;
-}
-
-.product__list-item {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-top: 120px;
-    width: 475px;
-    height: 600px;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-.product__img {
-    -ms-flex-item-align: center;
-    align-self: center;
 }
 
 .story {
@@ -526,20 +552,6 @@ body {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 } */
-/* .testimonials::before{
-    content:"";
-    width: 50px;
-    height: 50px;
-    background: #cde8dd;
-    border-radius: 50%;
-    position: absolute;
-    left:100%;
-    bottom:100%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-} */
 .testimonials {
     background: url(./../images/testimonials_bg.png);
     height: 720px;
@@ -548,7 +560,6 @@ body {
 .testimonials__feedback {
     display: -ms-flexbox;
     display: flex;
-  /* margin-left: 590px; */
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-align: center;
@@ -575,8 +586,20 @@ body {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
-  /* align-items: center; */
     margin-top: 117px;
+}
+
+.testimonials__controls {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 114px;
+    margin-right: 71px;
+}
+
+.testimonials__img-wrap {
+    margin-right: 62px;
 }
 
 .feedback__quote {
@@ -597,21 +620,8 @@ body {
     font-style: italic;
 }
 
-.testimonials__controls {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 114px;
-    margin-right: 71px;
-}
-
 .controls__link {
     margin-left: 100px;
-}
-
-.testimonials__img-wrap {
-    margin-right: 62px;
 }
 
 .blog {
