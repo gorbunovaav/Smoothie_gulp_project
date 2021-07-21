@@ -1,43 +1,44 @@
 .smoothies {
     background-color: white;
-    height: 870px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    min-height: 870px;
+    margin: 0 auto;
     &__heading {
         font-size: 50px;
         font-weight: bold;
         color: #f7ae3b;
         text-align: center;
         margin-top: 85px;
-        margin-bottom: 33px;
         font-family: 'Mulish-ExtraBold';
+        margin-bottom: 47px;
+        letter-spacing: -1px;
     }
     &__text {
-        margin-top: 0;
         font-size: 18px;
-        align-self: center;
         text-align: center;
         line-height: 35px;
-        width: 910px;
-        margin-bottom: 67px;
+        max-width: 915px;
+        margin-bottom: 60px;
+        text-align: center;
+        margin: 0 auto 60px;
+    }
+    &__icons{
+        display: block;
+        margin: 0;
+        padding: 0;
     }
 }
 
 .icons{
-    &__img {
-        object-fit: cover;
-    }
     &__list {
+
         display: flex;
         justify-content: center;
-        width: 980px;
-        height: 390px;
+        max-width: 980px;
         flex-wrap: wrap;
         align-items: center;
         margin: 0 auto;
         flex: 1 0 25%;
-        padding:0;
+        padding: 0;
         &-item {
             display: flex;
             justify-content: flex-end;
@@ -45,27 +46,25 @@
             flex-direction: column;
             width: 25%;
             height: 180px;
-            padding: 0 0 27px 0;
+            padding: 0;
             border-left: 2px solid #f6edde;
             border-top: 2px solid #f6edde;
+            // &:nth-child(5) {
+            //     border-left: none;
+            // }
+            // &:first-child {
+            //     border-left: none;
+            // }
+            // &:nth-child(-n+4) {
+            //     border-top: none;
+            // }
         }
-            &:nth-child(5) {
-                border-left: none;
-            }
-            &:first-child {
-                border-left: none;
-            }
-            &:nth-child(-n+4) {
-                border-top: none;
-            }
-        }
+    }
     &__heading {
-        font-size: 25px;
         color: #f2612d;
-        font-weight: bold;
-        align-self: center;
+        margin-top: 16px;
         text-align: center;
-        font-family: Mulish-ExtraBold;
-        white-space: nowrap;
+        font-size: 25px;
+        line-height: 40px;
     }
 }

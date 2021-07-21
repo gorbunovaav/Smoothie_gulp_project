@@ -122,35 +122,34 @@ body {
 
 .smoothies {
   background-color: white;
-  height: 870px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center; }
+  min-height: 870px;
+  margin: 0 auto; }
   .smoothies__heading {
     font-size: 50px;
     font-weight: bold;
     color: #f7ae3b;
     text-align: center;
     margin-top: 85px;
-    margin-bottom: 33px;
-    font-family: 'Mulish-ExtraBold'; }
+    font-family: 'Mulish-ExtraBold';
+    margin-bottom: 47px;
+    letter-spacing: -1px; }
   .smoothies__text {
-    margin-top: 0;
     font-size: 18px;
-    align-self: center;
     text-align: center;
     line-height: 35px;
-    width: 910px;
-    margin-bottom: 67px; }
-
-.icons__img {
-  object-fit: cover; }
+    max-width: 915px;
+    margin-bottom: 60px;
+    text-align: center;
+    margin: 0 auto 60px; }
+  .smoothies__icons {
+    display: block;
+    margin: 0;
+    padding: 0; }
 
 .icons__list {
   display: flex;
   justify-content: center;
-  width: 980px;
-  height: 390px;
+  max-width: 980px;
   flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
@@ -163,24 +162,16 @@ body {
     flex-direction: column;
     width: 25%;
     height: 180px;
-    padding: 0 0 27px 0;
+    padding: 0;
     border-left: 2px solid #f6edde;
     border-top: 2px solid #f6edde; }
-  .icons__list:nth-child(5) {
-    border-left: none; }
-  .icons__list:first-child {
-    border-left: none; }
-  .icons__list:nth-child(-n+4) {
-    border-top: none; }
 
 .icons__heading {
-  font-size: 25px;
   color: #f2612d;
-  font-weight: bold;
-  align-self: center;
+  margin-top: 16px;
   text-align: center;
-  font-family: Mulish-ExtraBold;
-  white-space: nowrap; }
+  font-size: 25px;
+  line-height: 40px; }
 
 .personal__list {
   display: flex;
@@ -561,8 +552,10 @@ body {
 
 .footer {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  max-width: 100%; }
   .footer__main {
+    padding-left: 75px;
     height: 372px;
     width: 100%;
     background: #f3ab3e;
@@ -570,10 +563,13 @@ body {
     justify-content: space-around;
     margin-top: 15px; }
   .footer__logo {
-    margin-top: 135px; }
+    margin-top: 135px;
+    width: 29%; }
   .footer__info {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 18%;
+    margin-right: 10px; }
   .footer__heading {
     font-family: "Mulish-ExtraBold";
     color: white;
@@ -581,13 +577,15 @@ body {
     font-size: 26px;
     line-height: 37px; }
   .footer__payment {
+    width: 23%;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    margin-right: 10px; }
   .footer__contacts {
     width: 28%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-right: 101px; }
   .footer__form {
     width: 495px;
     display: flex;
@@ -606,28 +604,39 @@ body {
     margin-bottom: 15px; }
 
 .payment__box {
-  width: 260px; }
+  width: 260px;
+  max-width: 247px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center; }
 
 .payment__img {
   margin-right: 15px;
   margin-bottom: 25px; }
 
 .contacts__field {
+  padding-left: 62px;
   background: url(./../images/subscribe_Icon.png) no-repeat;
   background-position: 20px;
   border-radius: 35px;
   height: 60px;
-  width: 495px;
+  max-width: 495px;
   color: #6d450c;
   font-family: Mulish-Bold;
   font-size: 17px;
   outline: none;
-  padding-left: 65px;
   background-color: white;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  -ms-border-radius: 35px;
-  -o-border-radius: 35px; }
+  width: 100%;
+  margin-bottom: 21px;
+  border: none;
+  position: relative; }
+
+.contacts__small-box {
+  max-width: 400px;
+  display: flex;
+  align-items: baseline;
+  margin-left: 111px; }
 
 .contacts__btn {
   border: none;
@@ -636,28 +645,32 @@ body {
   color: #6d450c;
   font-family: Mulish-ExtraBold;
   font-size: 18px;
-  margin-left: 185px;
-  margin-top: 35px;
-  position: relative; }
+  position: relative;
+  line-height: 40px;
+  padding-left: 74px;
+  width: 200px; }
   .contacts__btn::before {
     content: url(./../images/Arrow_follow.png);
     position: absolute;
     width: 48px;
     height: 43px;
     background-position: center;
-    top: 25%;
+    top: -9%;
     left: 5%; }
 
 .contacts__list {
   display: flex;
-  width: 115px;
-  justify-content: space-between; }
+  max-width: 110px;
+  padding: 0;
+  margin-left: 35px;
+  margin-right: 0; }
   .contacts__list-item {
-    margin: 0; }
+    margin-right: 22px; }
 
 .bottom__text {
   font-size: 13px;
   line-height: 35px;
+  padding-top: 15px;
   color: #af8a82;
   display: block;
   text-align: center; }
