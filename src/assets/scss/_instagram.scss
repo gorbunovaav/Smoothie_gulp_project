@@ -12,8 +12,11 @@
         font-size: 24px;
         font-family: Mulish-ExtraBold;
         position: relative;
-        ::before{
-            content: url(./../images/inst_green.jpg);
+        &::before{
+            content:"";
+            background-image: url(./../images/inst_green.jpg);
+            width: 26px;
+            height: 26px;
             position: absolute;
             left:-31px;
             top:3px;
@@ -29,8 +32,11 @@
             position: relative;
             margin: 0;
             padding: 0;
-            ::after{
-                content: url(./../images/inst_white.png);
+            &::after{
+                content:"";
+                background-image: url(./../images/inst_white.png);
+                width: 26px;
+                height: 26px;
                 position: absolute;
                 right: 20px;
                 bottom:20px;

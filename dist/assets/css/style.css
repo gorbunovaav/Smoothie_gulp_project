@@ -67,13 +67,9 @@ a:hover {
 html,
 body {
     font-family: "Mulish-Regular";
-    max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
-}
-
-#container {
-    max-width: 1920px;
 }
 
 .header {
@@ -174,48 +170,47 @@ body {
 
 .smoothies {
     background-color: white;
-    height: 870px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -ms-flex-align: center;
-    align-items: center;
+    max-height: 870px;
+    margin: 0 auto;
+    margin-bottom: 110px;
 }
 
 .smoothies__heading {
     font-size: 50px;
-    font-weight: bold;
     color: #f7ae3b;
     text-align: center;
     margin-top: 85px;
-    margin-bottom: 33px;
     font-family: 'Mulish-ExtraBold';
+    margin-bottom: 47px;
+    letter-spacing: -1px;
 }
 
 .smoothies__text {
-    margin-top: 0;
     font-size: 18px;
-    -ms-flex-item-align: center;
-    align-self: center;
     text-align: center;
     line-height: 35px;
-    width: 910px;
-    margin-bottom: 67px;
+    max-width: 915px;
+    margin-bottom: 60px;
+    text-align: center;
+    margin: 0 auto 60px;
 }
 
-.icons__img {
-    -o-object-fit: cover;
-    object-fit: cover;
+.smoothies__icons {
+    margin: 0;
+    padding: 0;
 }
 
-.icons__list {
+.smoothies .icons {
+    margin: 0;
+}
+
+.smoothies .icons__list {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 980px;
-    height: 390px;
+    max-width: 980px;
+    height: 368px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-align: center;
@@ -224,9 +219,10 @@ body {
     -ms-flex: 1 0 25%;
     flex: 1 0 25%;
     padding: 0;
+    gap: 0;
 }
 
-.icons__list-item {
+.smoothies .icons__list-item {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -236,33 +232,31 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 25%;
+    max-width: 240px;
     height: 180px;
-    padding: 0 0 27px 0;
-    border-left: 2px solid #f6edde;
-    border-top: 2px solid #f6edde;
+    padding: 0;
+    border-left: 1px solid #f6edde;
+    border-top: 1px solid #f6edde;
 }
 
-.icons__list:nth-child(5) {
+.smoothies .icons__list-item:nth-child(5) {
     border-left: none;
 }
 
-.icons__list:first-child {
+.smoothies .icons__list-item:first-child {
     border-left: none;
 }
 
-.icons__list:nth-child(-n+4) {
+.smoothies .icons__list-item:nth-child(-n+4) {
     border-top: none;
 }
 
-.icons__heading {
-    font-size: 25px;
+.smoothies .icons__heading {
     color: #f2612d;
-    font-weight: bold;
-    -ms-flex-item-align: center;
-    align-self: center;
+    margin-top: 16px;
     text-align: center;
-    font-family: Mulish-ExtraBold;
-    white-space: nowrap;
+    font-size: 25px;
+    line-height: 40px;
 }
 
 .personal__list {
@@ -736,8 +730,11 @@ body {
     position: relative;
 }
 
-.instagram__link ::before {
-    content: url(./../images/inst_green.jpg);
+.instagram__link::before {
+    content: "";
+    background-image: url(./../images/inst_green.jpg);
+    width: 26px;
+    height: 26px;
     position: absolute;
     left: -31px;
     top: 3px;
@@ -759,8 +756,11 @@ body {
     padding: 0;
 }
 
-.instagram__list-item ::after {
-    content: url(./../images/inst_white.png);
+.instagram__list-item::after {
+    content: "";
+    background-image: url(./../images/inst_white.png);
+    width: 26px;
+    height: 26px;
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -869,43 +869,30 @@ body {
 }
 
 .contacts__field {
-    padding: 21px 0 20px 62px;
+    padding-left: 62px;
     background: url(./../images/subscribe_Icon.png) no-repeat;
     background-position: 20px;
     border-radius: 35px;
     height: 60px;
-    line-height: 35px;
     max-width: 495px;
     color: #6d450c;
     font-family: Mulish-Bold;
     font-size: 17px;
     outline: none;
     background-color: white;
-    border-radius: 35px;
     width: 100%;
     margin-bottom: 21px;
     border: none;
     position: relative;
 }
 
-.contacts__field::-webkit-input-placeholder {
-    color: inherit;
-}
-
-.contacts__field::-moz-placeholder {
-    color: inherit;
-}
-
-.contacts__field:-ms-input-placeholder {
-    color: inherit;
-}
-
-.contacts__field::-ms-input-placeholder {
-    color: inherit;
-}
-
-.contacts__field::placeholder {
-    color: inherit;
+.contacts__small-box {
+    max-width: 400px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-left: 111px;
 }
 
 .contacts__btn {
@@ -915,13 +902,10 @@ body {
     color: #6d450c;
     font-family: Mulish-ExtraBold;
     font-size: 18px;
-    margin-left: 185px;
-    margin-top: 35px;
     position: relative;
-    max-width: 335px;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 111px;
+    line-height: 40px;
+    padding-left: 74px;
+    width: 200px;
 }
 
 .contacts__btn::before {
@@ -930,21 +914,17 @@ body {
     width: 48px;
     height: 43px;
     background-position: center;
-    top: 25%;
+    top: -9%;
     left: 5%;
-}
-
-.contacts__btn .__small-box {
-    max-width: 335px;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 111px;
 }
 
 .contacts__list {
     display: -ms-flexbox;
     display: flex;
-    max-width: 115px;
+    max-width: 110px;
+    padding: 0;
+    margin-left: 35px;
+    margin-right: 0;
 }
 
 .contacts__list-item {

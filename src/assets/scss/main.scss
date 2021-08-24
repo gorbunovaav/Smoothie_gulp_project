@@ -66,13 +66,11 @@ a:hover {
 html,
 body {
     font-family: "Mulish-Regular";
-    max-width:1920px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 }
-#container{
-    max-width:1920px;
-}
+
 
 
 @import './layouts/header';
