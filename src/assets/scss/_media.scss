@@ -1,7 +1,6 @@
 @media screen and (max-width: 768px) {
     .header__navigation {
         position: fixed;
-        background-color:#0aa566;
         top: 0;
         left:0 ;
         right: 0;
@@ -10,6 +9,7 @@
         flex-direction: column-reverse;
         justify-content: flex-end;
         padding-top:150px;
+        display: none;
     }
     .header__right-block{
         margin-bottom: 80px;
@@ -26,6 +26,49 @@
         display: block;
         z-index: 99999999;
     }
+    .smoothies{
+        margin: 0;
+        padding: 90px 0 90px;
+        max-height: 1215px;
+    }
+    .smoothies__heading{
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 50px;
+
+    }
+    .smoothies__text{
+        max-width: 695px;
+        margin: 0 35px 46px 35px;
+    }
+    .icons__list{
+        margin: 0;
+        max-width: 540px;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        flex: 1 0 50%;
+    }
+    .icons__list-item{
+        width: 50%;
+        flex-wrap: nowrap;
+    }
+    .icons__heading{
+        font-size: 25px;
+    }
+    .icons__list-item:first-child{
+        border-bottom: 1px solid #f6edde;
+    }
+    .icons__list-item:nth-child(2) {
+        border-bottom: 1px solid #f6edde;
+    }
+    .icons__list-item:nth-child(3) {
+        border-left: none;
+    }
+    .icons__list-item:nth-child(7) {
+        border-left: none;
+    }
+    
+
 }
 @media screen and (max-width: 360px) {
     .header__navigation {
@@ -35,5 +78,23 @@
     .header__burger-btn{
         display: block;
         z-index: 99999999;
+    }
+    .smoothies{
+        padding: 65px 0 65px;
+        max-height: 1445px;
+    }
+    .smoothies__text{
+        max-width: 695px;
+        margin: 0 20px 64px 20px;
+    }
+    .icons__list{
+        min-width: 340px;
+        flex-wrap: nowrap;
+    }
+    .icons__list-item{
+        width:170px;
+    }
+    .icons__heading{
+        font-size: 20px;
     }
 }

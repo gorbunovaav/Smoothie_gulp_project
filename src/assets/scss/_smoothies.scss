@@ -32,7 +32,7 @@
             display: flex;
             justify-content: center;
             max-width: 980px;
-            height: 368px;
+            min-height: 368px;
             flex-wrap: wrap;
             align-items: center;
             margin: 0 auto;
@@ -45,19 +45,26 @@
                 align-items: center;
                 flex-direction: column;
                 width: 25%;
-                max-width: 240px;
+                width: 240px;
                 height: 180px;
                 padding: 0;
                 border-left: 1px solid #f6edde;
                 border-top: 1px solid #f6edde;
-                &:nth-child(5) {
-                    border-left: none;
-                }
                 &:first-child {
                     border-left: none;
-                }
-                &:nth-child(-n+4) {
                     border-top: none;
+                }
+                &:nth-child(2) {
+                    border-top: none;
+                }
+                &:nth-child(3) {
+                    border-top: none;
+                }
+                &:nth-child(4) {
+                    border-top: none;
+                }
+                &:nth-child(5) {
+                    border-left: none;
                 }
             }
         }

@@ -210,7 +210,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     max-width: 980px;
-    height: 368px;
+    min-height: 368px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-align: center;
@@ -232,23 +232,32 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 25%;
-    max-width: 240px;
+    width: 240px;
     height: 180px;
     padding: 0;
     border-left: 1px solid #f6edde;
     border-top: 1px solid #f6edde;
 }
 
-.smoothies .icons__list-item:nth-child(5) {
-    border-left: none;
-}
-
 .smoothies .icons__list-item:first-child {
     border-left: none;
+    border-top: none;
 }
 
-.smoothies .icons__list-item:nth-child(-n+4) {
+.smoothies .icons__list-item:nth-child(2) {
     border-top: none;
+}
+
+.smoothies .icons__list-item:nth-child(3) {
+    border-top: none;
+}
+
+.smoothies .icons__list-item:nth-child(4) {
+    border-top: none;
+}
+
+.smoothies .icons__list-item:nth-child(5) {
+    border-left: none;
 }
 
 .smoothies .icons__heading {
@@ -3656,7 +3665,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @media screen and (max-width: 768px) {
     .header__navigation {
         position: fixed;
-        background-color: #0aa566;
         top: 0;
         left: 0;
         right: 0;
@@ -3667,6 +3675,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         -ms-flex-pack: end;
         justify-content: flex-end;
         padding-top: 150px;
+        display: none;
     }
 
     .header__right-block {
@@ -3688,6 +3697,59 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         display: block;
         z-index: 99999999;
     }
+
+    .smoothies {
+        margin: 0;
+        padding: 90px 0 90px;
+        max-height: 1215px;
+    }
+
+    .smoothies__heading {
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+
+    .smoothies__text {
+        max-width: 695px;
+        margin: 0 35px 46px 35px;
+    }
+
+    .icons__list {
+        margin: 0;
+        min-width: 540px;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        -ms-flex: 1 0 50%;
+        flex: 1 0 50%;
+    }
+
+    .icons__list-item {
+        width: 50%;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    .icons__heading {
+        font-size: 25px;
+    }
+
+    .icons__list-item:first-child {
+        border-bottom: 1px solid #f6edde;
+    }
+
+    .icons__list-item:nth-child(2) {
+        border-bottom: 1px solid #f6edde;
+    }
+
+    .icons__list-item:nth-child(3) {
+        border-left: none;
+    }
+
+    .icons__list-item:nth-child(7) {
+        border-left: none;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -3698,5 +3760,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     .header__burger-btn {
         display: block;
         z-index: 99999999;
+    }
+
+    .smoothies {
+        padding: 65px 0 65px;
+        max-height: 1445px;
+    }
+
+    .smoothies__text {
+        max-width: 695px;
+        margin: 0 20px 64px 20px;
+    }
+
+    .icons__list {
+        min-width: 340px;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    .icons__list-item {
+        width: 170px;
+    }
+
+    .icons__heading {
+        font-size: 20px;
     }
 }
